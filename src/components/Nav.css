@@ -1,0 +1,22 @@
+.nav-bar {
+    display: flex;
+    /* align-content: center; */
+    text-align: center;
+    /* align-items: center; */
+}
+
+li {
+    display: flex;
+    margin: 2rem;
+    font-size: larger;
+    font-weight: bolder;
+    border: solid 3px black;
+    padding: 1rem;
+    border-radius: 20px;
+    background-color: bisque;
+    color: black;
+}
+
+li:hover {
+    background-color: aqua;
+}
