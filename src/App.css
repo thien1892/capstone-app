@@ -45,3 +45,25 @@
   padding: 5px;
   border-radius: 30px;
 }
+h1 {
+  text-align: center;
+  color: rgb(146, 95, 19);
+}
+
+nav {
+  display: flex;
+  padding: 10px;
+  justify-content: flex-end;
+}
+
+.nav-link {
+  margin-left: 20px;
+  color: black;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  color: aqua;
+}
