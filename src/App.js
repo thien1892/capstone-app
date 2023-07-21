@@ -1,8 +1,9 @@
 import './App.css';
-import Header from './components/Header';
-import Nav from './components/Nav';
+// import Header from './components/Header';
+// import Nav from './components/Nav';
 import BookingPage from './BookingPage';
 import HomePage from './Homepage';
+// import BookingForm from './components/BookingForm';
 import { Routes, Route, Link} from 'react-router-dom';
 
 function App() {

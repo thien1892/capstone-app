@@ -1,0 +1,22 @@
+form{
+    display: grid;
+    /* justify-content: center; */
+    max-width: 200px;
+    gap: 20px;
+    padding: 20px;
+    border: solid 2px brown;
+    margin-left: 10px;
+    border-radius: 30px;
+    /* justify-content: center; */
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+}
+
+
+.error-message {
+    color: red;
+    font-weight: bolder;
+}

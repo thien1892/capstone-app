@@ -20,7 +20,7 @@ function Nav() {
     const mapListNav = listNav.map(
         item => {
             return(
-                <li>
+                <li key={item.name}>
                     <a href={item.link}>
                         {item.name}
                     </a>
