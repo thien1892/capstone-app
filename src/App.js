@@ -5,8 +5,10 @@ import Nav from './components/Nav';
 function App() {
   return (
     <div>
-      <Nav/>
-      <Header/>
+      <div className="header">
+        <Header/>
+        <Nav/>
+      </div>
     </div>
   );
 }

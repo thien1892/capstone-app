@@ -1,22 +1,26 @@
 .nav-bar {
     display: flex;
-    /* align-content: center; */
-    text-align: center;
-    /* align-items: center; */
+    /* text-align: center;
+    justify-content: center; */
 }
 
 li {
     display: flex;
-    margin: 2rem;
+    margin-left: 20px;
     font-size: larger;
     font-weight: bolder;
     border: solid 3px black;
-    padding: 1rem;
+    padding: 10px;
     border-radius: 20px;
-    background-color: bisque;
+    background-color:burlywood;
     color: black;
+    justify-items: center;
 }
 
 li:hover {
     background-color: aqua;
+}
+
+a {
+    text-decoration: none;
 }
