@@ -2,6 +2,7 @@ import './BookingForm.css';
 import * as Yup from 'yup'; //"yup": "^1.2.0"
 import { Formik, Form, ErrorMessage, Field, useField } from 'formik'; //"formik": "^2.4.2"
 import moment from 'moment'; //"moment": "^2.29.4"
+import { useNavigate } from 'react-router-dom';
 
 //https://formik.org/docs/tutorial
 const MyCheckbox = ({ children, ...props }) => {
@@ -36,7 +37,10 @@ const MySelect = ({ label, ...props }) => {
     );
   };
 
+
+
 function BookingFormVer2() {
+    const navigate = useNavigate();
     return(
         <Formik
             initialValues={
@@ -71,16 +75,17 @@ function BookingFormVer2() {
                 })
             }
             onSubmit={(values, { setSubmitting, resetForm }) => {
-                setTimeout(() => {
-                    alert(JSON.stringify(values, null, 2));
-                    setSubmitting(false);
-                }, 400);
+                // setTimeout(() => {
+                //     alert(JSON.stringify(values, null, 2));
+                //     setSubmitting(false);
+                // }, 400);
                 resetForm(); //reset form
+                navigate('/confirm');
             }}
         >
             <Form>
-                <label htmlFor='resDate'>Date: </label>
-                <Field name='resDate' type='date'/>
+                <label htmlFor='resDate'>Date:</label>
+                <Field name='resDate' type='date' className='field-form'/>
                 <ErrorMessage name='resDate'>
                     { msg => <div className='error-message'>{msg}</div> }
                 </ErrorMessage>
@@ -89,31 +94,34 @@ function BookingFormVer2() {
                 <ErrorMessage name='resTime'/> */}
 
                 <MySelect label='Time: ' name='resTime'>
-                    <option value='17:00'>17:00</option>
-                    <option value='18:00'>18:00</option>
-                    <option value='19:00'>19:00</option>
-                    <option value='20:00'>20:00</option>
-                    <option value='21:00'>21:00</option>
-                    <option value='22:00'>22:00</option>
+                    <option value='17:00'  className='field-form'>17:00</option>
+                    <option value='18:00'  className='field-form'>18:00</option>
+                    <option value='19:00' className='field-form'>19:00</option>
+                    <option value='20:00' className='field-form'>20:00</option>
+                    <option value='21:00' className='field-form'>21:00</option>
+                    <option value='22:00' className='field-form'>22:00</option>
                 </MySelect>
 
-                <label htmlFor='guests'>Number of guests: </label>
-                <Field name='guests' type='number'/>
+                <label htmlFor='guests'>Number of guests:</label>
+                <Field name='guests' type='number' 
+                data-testid='number'
+                className='field-form'
+                />
                 <ErrorMessage name='guests'>
                     { msg => <div className='error-message'>{msg}</div> }
                 </ErrorMessage>
 
                 <MyCheckbox name="outside">
-                    Outside
+                    Outdoor
                 </MyCheckbox>
 
                 {/* <label htmlFor='guests'>Occation: </label> */}
                 <MySelect label='Occation: ' name='occation'>
-                    <option value='Birthday'>Birthday</option>
-                    <option value='Annivesary'>Annivesary</option>
+                    <option value='Birthday' className='field-form'>Birthday</option>
+                    <option value='Annivesary' className='field-form'>Annivesary</option>
                 </MySelect>
 
-                <button type="submit">Submit</button>
+                <button type="submit"  className='submit-form'>Submit</button>
             </Form>
 
         </Formik>

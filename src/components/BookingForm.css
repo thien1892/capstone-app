@@ -1,22 +1,49 @@
 form{
     display: grid;
     /* justify-content: center; */
-    max-width: 200px;
+    max-width: 300px;
     gap: 20px;
     padding: 20px;
-    border: solid 2px brown;
-    margin-left: 10px;
-    border-radius: 30px;
+    border: solid 3px #F4CE14;
+    /* margin-left: 10px; */
+    border-radius: 16px;
     /* justify-content: center; */
     text-align: center;
+    margin: 20px;
+
 }
 
 label {
     font-weight: bold;
+    font-size: 20px;
+    font-family: Karla;
+}
+
+.field-form {
+    font-size: 18px;
+    font-family: Karla;
+    text-align: center;
+    padding: 5px;
+    border-radius: 16px;
+    border: 1px solid #F4CE14;
 }
 
 
 .error-message {
     color: red;
     font-weight: bolder;
+}
+
+.submit-form {
+    background-color: #F4CE14;
+    border-radius: 16px;
+    border: 3px solid #F4CE14;
+    font-size: 22px;
+    font-family: Karla;
+    font-weight: bold;
+}
+
+.submit-form:hover {
+    background-color: aqua;
+    border: 3px solid aqua;
 }

@@ -1,4 +1,34 @@
-header {
-    margin-top: 20px;
-    margin-left: 20px;
+.header-component {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    background-color: #EDEFEE;
+}
+
+.header-component img {
+    margin-bottom: auto;
+    margin-top: auto;
+    margin-right: 30px;
+}
+
+
+.header-nav-component {
+    display: flex;
+    margin-bottom: auto;
+    margin-top: auto;
+    /* justify-content: flex-end; */
+}
+
+.header-nav-link {
+    padding-left: 20px;
+    font-weight: bolder;
+    font-family: Karla;
+}
+
+.header-nav-link-item {
+    color: #333333;
+}
+
+.header-nav-link-item:hover {
+    color: #F4CE14;
 }

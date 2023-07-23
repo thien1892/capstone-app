@@ -1,0 +1,19 @@
+.button-component-link {
+    color:  #333333;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: bolder;
+    line-height: normal;
+    background-color: #F4CE14;
+    border-radius: 16px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    /* margin-top: 50px; */
+}
+
+.button-component-link:hover {
+    background-color:aqua;
+}
