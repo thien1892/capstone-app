@@ -2,7 +2,7 @@ import './BookingForm.css';
 import * as Yup from 'yup'; //"yup": "^1.2.0"
 import { Formik, Form, ErrorMessage, Field, useField } from 'formik'; //"formik": "^2.4.2"
 import moment from 'moment'; //"moment": "^2.29.4"
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Routes } from 'react-router-dom';
 
 //https://formik.org/docs/tutorial
 const MyCheckbox = ({ children, ...props }) => {
@@ -80,20 +80,22 @@ function BookingFormVer2() {
                 //     setSubmitting(false);
                 // }, 400);
                 resetForm(); //reset form
+                // navigate('/confirm');
                 navigate('/confirm');
+
             }}
         >
             <Form>
                 <label htmlFor='resDate'>Date:</label>
-                <Field name='resDate' type='date' className='field-form'/>
-                <ErrorMessage name='resDate'>
+                <Field name='resDate' type='date' className='field-form' data-testid='resDate'/>
+                <ErrorMessage name='resDate' data-testid='resDate-error'>
                     { msg => <div className='error-message'>{msg}</div> }
                 </ErrorMessage>
                 {/* <label htmlFor='resTime'>Time: </label>
                 <Field name='resTime' type='text'/>
                 <ErrorMessage name='resTime'/> */}
 
-                <MySelect label='Time: ' name='resTime'>
+                <MySelect label='Time: ' name='resTime' data-testid='resTime'>
                     <option value='17:00'  className='field-form'>17:00</option>
                     <option value='18:00'  className='field-form'>18:00</option>
                     <option value='19:00' className='field-form'>19:00</option>
@@ -104,10 +106,10 @@ function BookingFormVer2() {
 
                 <label htmlFor='guests'>Number of guests:</label>
                 <Field name='guests' type='number' 
-                data-testid='number'
+                data-testid='guests'
                 className='field-form'
                 />
-                <ErrorMessage name='guests'>
+                <ErrorMessage name='guests' data-testid='guests-error'>
                     { msg => <div className='error-message'>{msg}</div> }
                 </ErrorMessage>
 
@@ -121,7 +123,7 @@ function BookingFormVer2() {
                     <option value='Annivesary' className='field-form'>Annivesary</option>
                 </MySelect>
 
-                <button type="submit"  className='submit-form'>Submit</button>
+                <button type="submit"  className='submit-form' data-testid='submit'>Submit</button>
             </Form>
 
         </Formik>
